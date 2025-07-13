@@ -10,7 +10,6 @@
         align-items: center;
         height: 100vh;
         width: 100vw;
-        font-family: 'Outfit', 'Helvetica', sans-serif;
       }
       
       * {
@@ -18,15 +17,10 @@
         padding: 0;  
       }
     </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap" rel="stylesheet">
-    <link rel="icon" href="https://a-crane-game-for-you.vercel.app/favicon.png">
   </head>
   <title>your heart is the crane</title>
-  <body>
+  <body onload="setInterval(step,100)">
     <main>
-      <h1 style="font-size: 4rem; letter-spacing: -2px; -webkit-text-stroke: 4px #fff; color: #ff6ad0; margin-bottom: 1rem; font-weight: 900; text-align: center;">what do you need today?</h1>
       <img src="https://a-crane-game-for-you.vercel.app/crane-game-800x600.gif" width="800" height="600" usemap="#crane-game" style="border: 10px double #fff">
       <map name="crane-game">
         <area target="" alt="here you go づ(˶• ◡ •˶ )づ " title="here you go づ(˶• ◡ •˶ )づ " href="" coords="286,504,441,491,441,599,288,599" shape="poly">
@@ -44,5 +38,13 @@
         <area target="" alt="charm" title="charm" href="" coords="521,298,571,373" shape="rect">
       </map>
     </main>
+      
+    <script type="text/javascript">
+      message = "what do you need today? . . . you can grab it with your heart . . . ";
+      function step() {
+        message = message.substr(1) + message.substr(0,1);
+        document.title = message.substr(0,15);
+      }
+    </script>
   </body>
 </html>
